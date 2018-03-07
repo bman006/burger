@@ -1,14 +1,18 @@
 var express = require(`express`);
 var router = express.Router();
 var burger = require(`../models/burger.js`);
+var exphbs = require(`express-handlebars`);
 
 //Home page
 router.get("/", function(req, res) {
     //Get all burger data from database
     burger.all(function(data) {
         //change format of data for use in handlebars
-
+        var burgerObject = {
+            burger: data
+        };
         //Render page
+        res.render("index", burgerObject)
     });
 });
 

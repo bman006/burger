@@ -1,0 +1,15 @@
+{{!-- List of burgers ready to eat --}}
+<ul class="list-group">
+  <li class="list-group-item">Cras justo odio</li>
+
+    {{#each burger}}
+        {{#unless devoured}}
+            {{> new-burger-block devoured=false}}
+        {{/unless}}
+    {{/each}}
+</ul>
+
+{{!-- User entry field to add burgers --}}
+
+
+{{!-- List of burgers that have been eaten --}}
