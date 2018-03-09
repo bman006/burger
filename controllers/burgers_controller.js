@@ -21,11 +21,7 @@ router.post("/api/:burger", function(req, res) {
     //Add new burger to the database
     burger.create(req.params.burger, function(data) {
         //Send back the full row of data for the new burger
-        res.json({ 
-            id: data.id,
-            burger_name: data.burger_name,
-            devoured: data.devoured
-        });
+        res.json(data);
     });
 });
 
@@ -34,6 +30,7 @@ router.put("/api/devour/:id", function(req, res) {
     //Devour the burger, changing the corresponding boolean value in the table
     burger.update(req.params.id, function(data) {
         //Send back the now updated row of data for the burger
+        res.json(data);
     });
 });
 
