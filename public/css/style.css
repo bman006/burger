@@ -1,3 +1,22 @@
+body {
+    background-image: url("../assets/images/background.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.page-header {
+    margin-bottom: 40px;
+}
+
+
 .devour-button {
     float: right;
+}
+
+.list-group-item {
+    height: 50px;
+}
+
+.burger-text {
+    display: inline-block;
 }
